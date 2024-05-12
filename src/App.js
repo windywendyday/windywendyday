@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+
+import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom'
+import Aboutme from './pages/Aboutme/Aboutme';
+import Blogs from './pages/Blogs';
+import Ideas from './pages/Ideas';
+
+
 
 function App() {
+  // const sideBar = [
+  //   {
+  //     key:'aboutme',
+  //     title:'About Me'
+      
+  //   },
+  // ]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Navigate to='/aboutme' />} />
+          <Route path='/aboutme' element={<Aboutme />} />
+          <Route path='/blogs' element={<Blogs />} />
+          <Route path='/ideas' element={<Ideas />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
