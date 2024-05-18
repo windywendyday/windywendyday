@@ -3,8 +3,8 @@ import React from 'react';
 
 import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom'
 import Aboutme from './pages/Aboutme/Aboutme';
-import Blogs from './pages/Blogs';
-import Ideas from './pages/Ideas';
+import Blogs from './pages/Blogs/Blogs';
+import Ideas from './pages/Ideas/Ideas';
 
 
 
