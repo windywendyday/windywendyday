@@ -2,11 +2,7 @@ import './App.css';
 import React from 'react';
 
 import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom'
-import Aboutme from './pages/Aboutme/Aboutme';
-import Blogs from './pages/Blogs/Blogs';
-import Ideas from './pages/Ideas/Ideas';
-
-
+import Index from './pages/Index';
 
 function App() {
   // const sideBar = [
@@ -21,10 +17,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Navigate to='/aboutme' />} />
-          <Route path='/aboutme' element={<Aboutme />} />
-          <Route path='/blogs' element={<Blogs />} />
-          <Route path='/ideas' element={<Ideas />} />
+          <Route path='/' element={<Navigate to='/index/aboutme' />} />
+          <Route path='/index' element={<Navigate to='/index/aboutme' />} />
+          <Route path='/index/*' element={<Index />} />
+          {/* <Route path='/index/*' element={<Navigate to={*} />} /> */}
         </Routes>
       </BrowserRouter>
     </div>
